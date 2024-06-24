@@ -31,10 +31,10 @@ function checkRoot()
   fi
 }
 
-# Ensure script is run on Ubuntu 18.04 (not a super secure script)
+# Ensure script is run on Ubuntu 22.04 (not a super secure script)
 function checkUbuntu()
 {
-  if [[ $(lsb_release -rs) == "18.04" ]]; then
+  if [[ $(lsb_release -rs) == "22.04" ]]; then
   date >> $LOG_FILE
   echo "###### Checking Ubuntu Version" | tee -a $LOG_FILE
   else
@@ -356,7 +356,7 @@ updatePackages
 installSSH
 installScreen
 installDynamips
-installDynagen
+#installDynagen
 enableForwarding
 installLXC
 # installLXCwebportal
@@ -367,6 +367,6 @@ configLXCnet
 updateDNSresolver
 copyScripts
 setupDynamips
-setTimeZone
+#setTimeZone
 displayMessage
 
