@@ -1,4 +1,4 @@
-# Ubuntu_22.4
+# Ubuntu_22.04
 Repo of Ubuntu 22.04 scripts
 
 # Work in progress
