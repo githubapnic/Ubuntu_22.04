@@ -2,6 +2,15 @@
 ## Requirements
 This script is designed to work on Ubuntu 18.04 LTS. It should be run under root (not suitable for a production environment).
 
+### Pre-requisite
+Before running the `setup_rpki_workshop.sh` ensure the $HOME variable will be maintain by sudo. To do this run the following script
+
+```
+cd ~/Ubuntu_20.4/workshops/rpki
+chmod 744 fixhomevaraible.sh
+sudo ./fixhomevaraible.sh
+```
+
 ### Cisco IOS image file
 The dynamips for this workshop requires a cisco 7200 IOS image file to be located in an images folder.
 
