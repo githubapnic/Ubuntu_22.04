@@ -205,9 +205,8 @@ function installDynamips()
     echo "###### Dynamips already installed" | tee -a $LOG_FILE
   else
     echo "###### Installing dynamips" | tee -a $LOG_FILE
-    dpkg --add-architecture i386 >> $LOG_FILE
     apt-get update -qq >> $LOG_FILE
-    apt-get install -qq dynamips:i386 >> $LOG_FILE
+    apt-get install -qq dynamips >> $LOG_FILE
     checkSuccess dynamips
   fi
 }
@@ -221,7 +220,10 @@ function installDynagen()
   else
     echo "###### Installing dynagen" | tee -a $LOG_FILE
     apt-get update -qq >> $LOG_FILE
-    apt-get install -qq dynagen >> $LOG_FILE
+    #apt-get install -qq dynagen >> $LOG_FILE
+	wget https://mirror.aarnet.edu.au/pub/ubuntu/archive/pool/multiverse/d/dynagen/dynagen_0.11.0-7_all.deb >> $LOG_FILE
+	dpkg --force-all -i dynagen_0.11.0-7_all.deb >> $LOG_FILE
+	rm *.deb
     checkSuccess dynagen
   fi
 }
