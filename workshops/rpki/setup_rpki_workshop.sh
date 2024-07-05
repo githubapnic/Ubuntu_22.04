@@ -20,7 +20,7 @@ NETPLAN_IP="192.168.30.240"
 USERNAME=$1
 PASSWORD=$2
 #TEMPLATE_PACKAGES="openssh-server gcc curl build-essential rsync wget jansson"
-TEMPLATE_PACKAGES="openssh-server,gcc,curl,build-essential,rsync,wget,jansson"
+TEMPLATE_PACKAGES="openssh-server,gcc,curl,build-essential,rsync,wget,jansson,apt-utils,net-tools"
 
 # Ensure script is run as root user (not a super secure script)
 function checkRoot()
