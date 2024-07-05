@@ -150,6 +150,7 @@ function createAPTContainer()
     # Copy apt-cache install script to server
 	sudo mkdir -p /var/lib/lxc/apt.apnictraining.net/rootfs/home/$USERNAME/scripts/ >> $LOG_FILE
     sudo cp ../aptcache/createAPT-cache.sh /var/lib/lxc/apt.apnictraining.net/rootfs/home/$USERNAME/scripts/. >> $LOG_FILE
+    echo "lxc.start.auto = 1" | sudo tee -a /var/lib/lxc/apt.apnictraining.net/config >> $LOG_FILE
   fi
 }
 
